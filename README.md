@@ -1,0 +1,87 @@
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000) ![Express.js](https://img.shields.io/badge/Express.js-%23404d59.svg?logo=express&logoColor=%2361DAFB) ![NodeJS](https://img.shields.io/badge/Node.js-6DA55F?logo=node.js&logoColor=white)
+# A Public API to Retrieve Basic Information
+
+## Table of Contents
+- [Introduction](#introduction)
+  - [Project Description](#project-description)
+- [Technologies Used](#technologies-used)
+- [Installation Instructions](#installation-instructions)
+- [API Documentation](#api-documentation)
+- [Usage](#usage)
+  - [Local Version Usage](#local-version-usage)
+  - [Deployed Version Usage](#deployed-version-usage)
+
+## Introduction
+### Project Description
+This project is a part of HNG12 Internship, and it's intended to meet the
+requirements of stage 0 task for the **Backend Track**.
+
+A public API is required to be developed and have the ability to let users
+retrieve basic information.
+
+The basic information to be retrieved includes the following:
+  1. **The developer's registered email address** in the HNG12 Slack workspace.
+  2. **The current datetime** as an ISO 8601 formatted timestamp.
+  3. **The GitHub URL** of the project's codebase.
+
+## Technologies Used
+- **Runtime Environment**: [Node.js](https://hng.tech/hire/nodejs-developers)
+- **Server**: Express.js
+- **Containerization**: Docker, Docker-compose
+
+## Installation Instructions
+To get started with the API locally, follow these steps:
+
+1. **Clone your repository**:
+  ```bash
+  git clone https://github.com/AAEmara/HNG_Public_API.git
+  cd HNG_Public_API
+  ```
+2. **Install dependencies and run the docker container**:
+  ```bash
+  ./scripts/docker-compose/dev/build
+  ```
+3. **Now, the server service is running using Docker Compose.**
+
+## API Documentation
+**API Endpoint**: `GET /api/information`
+**Request Format using Bash CLI**:
+  ```bash
+  curl <the-host-url>/api/information # Uses GET method by default.
+  ```
+**Response Format using Bash CLI**:
+  ```bash
+   {
+    "email": "<developer's-email>",
+    "current_datetime": "<current-datetime-in-ISO-8601>",
+    "github_url": "<the-project's-github-repository-url>"
+  }
+  ```
+## Usage
+### Local Version Usage
+**Local Version Request Format using Bash CLI**:
+  ```bash
+  curl localhost:5000/api/information # or curl GET localhost:5000/api/information
+  ```
+**Local Version Response Format using Bash CLI**:
+  ```bash 
+  {
+    "email": "abdelrahmanemara18@gmail.com",
+    "current_datetime": "2025-01-31T00:56:52.040Z",
+    "github_url": "https://github.com/AAEmara/HNG_Public_API.git"
+  }
+  ```
+### Deployed Version Usage
+**Deployed Version Request Format using Bash CLI**:
+  ```bash
+  curl <website>/api/information # or curl GET localhost:5000/api/information
+  ```
+**Deployed Version Response Format using Bash CLI**:
+  ```bash 
+  {
+    "email": "abdelrahmanemara18@gmail.com",
+    "current_datetime": "2025-01-31T00:56:52.040Z",
+    "github_url": "https://github.com/AAEmara/HNG_Public_API.git"
+  }
+  ```
+## 
