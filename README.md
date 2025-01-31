@@ -40,11 +40,17 @@ To get started with the API locally, follow these steps:
   git clone https://github.com/AAEmara/HNG_Public_API.git
   cd HNG_Public_API
   ```
-2. **Install dependencies and run the docker container**:
+2. **Install dependencies**
   ```bash
+  cd server
+  npm i
+  ```
+3. **Run the docker container**:
+  ```bash
+  cd ..
   ./scripts/docker-compose/dev/build
   ```
-3. **Now, the server service is running using Docker Compose.**
+4. **Now, the server service is running using Docker Compose.**
 
 ## API Documentation
 **API Endpoint**: `GET /api/information`
@@ -81,12 +87,7 @@ To get started with the API locally, follow these steps:
   ```bash
   curl https://hng-public-api-1.vercel.app/api/information
   ```
-2. **Install dependencies**
-  ```bash
-  cd server
-  npm i
-  ```
-3. **Deployed Version Response Format using Bash CLI**:
+2. **Deployed Version Response Format using Bash CLI**:
   ```bash 
   {
     "email": "abdelrahmanemara18@gmail.com",
