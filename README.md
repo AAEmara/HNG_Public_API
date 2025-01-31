@@ -1,5 +1,6 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000) ![Express.js](https://img.shields.io/badge/Express.js-%23404d59.svg?logo=express&logoColor=%2361DAFB) ![NodeJS](https://img.shields.io/badge/Node.js-6DA55F?logo=node.js&logoColor=white)
 # A Public API to Retrieve Basic Information
+![HNG Logo](/assets/images/hng.jpg)
 
 ## Table of Contents
 - [Introduction](#introduction)
@@ -12,10 +13,10 @@
   - [Deployed Version Usage](#deployed-version-usage)
 
 ## Introduction
-### Project Description
 This project is a part of HNG12 Internship, and it's intended to meet the
 requirements of stage 0 task for the **Backend Track**.
 
+### Project Description
 A public API is required to be developed and have the ability to let users
 retrieve basic information.
 
@@ -28,6 +29,7 @@ The basic information to be retrieved includes the following:
 - **Runtime Environment**: [Node.js](https://hng.tech/hire/nodejs-developers)
 - **Server**: Express.js
 - **Containerization**: Docker, Docker-compose
+- **Deployment**: Vercel
 
 ## Installation Instructions
 To get started with the API locally, follow these steps:
@@ -59,11 +61,11 @@ To get started with the API locally, follow these steps:
   ```
 ## Usage
 ### Local Version Usage
-**Local Version Request Format using Bash CLI**:
+1. **Local Version Request Format using Bash CLI**:
   ```bash
   curl localhost:5000/api/information # or curl GET localhost:5000/api/information
   ```
-**Local Version Response Format using Bash CLI**:
+2. **Local Version Response Format using Bash CLI**:
   ```bash 
   {
     "email": "abdelrahmanemara18@gmail.com",
@@ -71,12 +73,13 @@ To get started with the API locally, follow these steps:
     "github_url": "https://github.com/AAEmara/HNG_Public_API.git"
   }
   ```
+
 ### Deployed Version Usage
-**Deployed Version Request Format using Bash CLI**:
+1. **Deployed Version Request Format using Bash CLI**:
   ```bash
-  curl <website>/api/information # or curl GET localhost:5000/api/information
+  curl https://hng-public-api-1.vercel.app/api/information
   ```
-**Deployed Version Response Format using Bash CLI**:
+2. **Deployed Version Response Format using Bash CLI**:
   ```bash 
   {
     "email": "abdelrahmanemara18@gmail.com",
@@ -84,4 +87,11 @@ To get started with the API locally, follow these steps:
     "github_url": "https://github.com/AAEmara/HNG_Public_API.git"
   }
   ```
-## 
+
+### Browser Version Usage
+**Browser Version Request Format**:
+1. Copy the following url: `https://hng-public-api-1.vercel.app/api/information`
+2. Paste the url in the browser.
+3. The broswer will automatically trigger the `GET` method with the `api/information` endpoint.
+4. The Response will be presented on the broswer as following:
+![JSON response representation on the broswer](/assets/images/json-response-browser.png)
