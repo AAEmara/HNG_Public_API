@@ -11,6 +11,7 @@
 - [Usage](#usage)
   - [Local Version Usage](#local-version-usage)
   - [Deployed Version Usage](#deployed-version-usage)
+  - [Browser Version Usage](#browser-version-usage)
 
 ## Introduction
 This project is a part of HNG12 Internship, and it's intended to meet the
@@ -59,6 +60,7 @@ To get started with the API locally, follow these steps:
     "github_url": "<the-project's-github-repository-url>"
   }
   ```
+
 ## Usage
 ### Local Version Usage
 1. **Local Version Request Format using Bash CLI**:
@@ -79,7 +81,12 @@ To get started with the API locally, follow these steps:
   ```bash
   curl https://hng-public-api-1.vercel.app/api/information
   ```
-2. **Deployed Version Response Format using Bash CLI**:
+2. **Install dependencies**
+  ```bash
+  cd server
+  npm i
+  ```
+3. **Deployed Version Response Format using Bash CLI**:
   ```bash 
   {
     "email": "abdelrahmanemara18@gmail.com",
@@ -92,6 +99,6 @@ To get started with the API locally, follow these steps:
 **Browser Version Request Format**:
 1. Copy the following url: `https://hng-public-api-1.vercel.app/api/information`
 2. Paste the url in the browser.
-3. The broswer will automatically trigger the `GET` method with the `api/information` endpoint.
-4. The Response will be presented on the broswer as following:
-![JSON response representation on the broswer](/assets/images/json-response-browser.png)
+3. The browser will automatically trigger the `GET` method with the `api/information` endpoint.
+4. The Response will be presented on the browser as following:
+![JSON response representation on the browser](/assets/images/json-response-browser.png)
